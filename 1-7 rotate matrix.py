@@ -13,10 +13,6 @@ def solution1(M, rotate=None):
         ans.append(temp)
     return ans
 
-def solution2():
-    # NxN matrix inplace rotation
-    
-
 if __name__ == '__main__':
     m = [
     [1,2,3,4],

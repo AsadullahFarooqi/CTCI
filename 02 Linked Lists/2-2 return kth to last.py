@@ -17,23 +17,45 @@ def recursive(root,k):
     # Get to end of the linked list and recurlivly keep track of the elements
     # and return 
 
-    if root <= 0:
+    if not root.next:
         return root.val,1
-
-    s,kth = recursive(root.next,k)
-    if kth == k:
-        return s, kth
     
-    return root.val,k+1
-
-
+    s,kth = recursive(root.next,k)
+        if kth == k:
+            return s
+    
+    return root.val, kth+1
 
 
 def iteratively(root, kth):
     # iterate on the list with two pointers with the kth difference by the same pace 
     # so when the 2nd pointer hits the end the first one will be on kth 
+    
+    i = 0
     pass
+
+class Node:
+    def __init__(self, value):
+        self.val = value
+        self.next = None
+
+def create_list(l):
+    r = Node(l[0])
+    temp = r
+    for i in l[1:]:
+        t = Node(i)
+        temp.next = t
+        temp = t
+    return r
+
+def print_l(r):
+    while r:
+        print(r.val)
+        r = r.next
+    return
 
 
 if __name__ == '__main__':
-    recursive(11, 23)
+    l = [23, 53, 66, 99, 90, 49, 12]
+    r = create_list(l)
+    print(recursive(r, 2))

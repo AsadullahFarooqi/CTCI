@@ -1,22 +1,4 @@
-class Node:
-    def __init__(self, value):
-        self.val = value
-        self.next = None
-
-def create_list(l):
-    r = Node(l[0])
-    temp = r
-    for i in l[1:]:
-        t = Node(i)
-        temp.next = t
-        temp = t
-    return r
-
-def print_l(r):
-    while r:
-        print(r.val)
-        r = r.next
-    return
+from LinkedList import LinkedList
 
 def solution1(root, kth):
     # finding the length of the linked list and then returning
@@ -65,6 +47,6 @@ def iteratively(root, kth):
 
 if __name__ == '__main__':
     l = [23, 53, 66, 99, 90, 49, 12]
-    r = create_list(l)
+    r = LinkedList().create_list(l)
     # print(recursive(r, 2)[0].val)
     print(iteratively(r, 2).val)

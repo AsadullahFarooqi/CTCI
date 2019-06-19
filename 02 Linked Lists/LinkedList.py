@@ -92,7 +92,7 @@ class LinkedList:
         """
         temp = root
         while temp:
-            print(temp.val)
+            print(temp.val, end=" -> ")
             temp = temp.next
 
     def delete(self, root, value=None, index=None):

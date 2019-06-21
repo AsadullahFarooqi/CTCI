@@ -93,8 +93,8 @@ class LinkedList:
         temp = root
         while temp:
             if not temp.next:
-                print()
-                continue
+                print(temp.val)
+                break
             print(temp.val, end=" -> ")
             temp = temp.next
         print()

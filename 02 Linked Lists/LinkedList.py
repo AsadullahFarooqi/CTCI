@@ -92,8 +92,12 @@ class LinkedList:
         """
         temp = root
         while temp:
+            if not temp.next:
+                print()
+                continue
             print(temp.val, end=" -> ")
             temp = temp.next
+        print()
 
     def delete(self, root, value=None, index=None):
         """Summary

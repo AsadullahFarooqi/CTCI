@@ -76,9 +76,7 @@ def solution(a,b):
         t_b = t_b.next
 
     return t_a
-        
-
-        
+    
 
 if __name__ == '__main__':
     a = LinkedList().create_list([3, 6, 8, 9])

@@ -29,7 +29,8 @@ def recursive(root,k):
 
 
 def iteratively(root, kth):
-    # iterate on the list with two pointers with the kth difference by the same pace 
+    # iterate on the list with two pointers with the kth difference. 
+    # Then iterate by the same pace 
     # so when the 2nd pointer hits the end the first one will be on kth 
     
     i = 1
@@ -44,9 +45,11 @@ def iteratively(root, kth):
         k = k.next
     return k
 
-
 if __name__ == '__main__':
-    l = [23, 53, 66, 99, 90, 49, 12]
-    r = LinkedList().create_list(l)
+    l1 = [1]
+    l2 = []
+    r1 = LinkedList().create_list(l1)
+    # r2 = LinkedList().create_list(l2)
     # print(recursive(r, 2)[0].val)
-    print(iteratively(r, 2).val)
+    # print(iteratively(r, 2).val) LinkedList().print_list(
+    LinkedList().print_list(res)

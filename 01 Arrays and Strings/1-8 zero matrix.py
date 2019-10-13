@@ -11,6 +11,28 @@ def solution1(M):
                 
     return ans
 
+def solution2(M):
+    # this algorithm works inplace.
+    # which makes it space complexity to O(M) 
+    for r in range(len(M)):
+        for c in range(len(M[0])):
+            if M[r][c] == 0:
+                # M[r] = [0] * len(M[0])
+                
+                # change the row
+                for i in range(len(M[0])):
+                    if M[r][i] != 0: M[r][i] = float("inf")
+                
+                # change the col
+                for i in range(len(M)):
+                    if M[i][c] != 0: M[i][c] = float("inf")
+                
+    
+    for r in range(len(M)):
+        for c in range(len(M[0])):
+            if M[r][c] == float("inf"): M[r][c] = 0
+    return M
+
 if __name__ == '__main__':
     m = [
     [ 1,  2,  4,  55 ],

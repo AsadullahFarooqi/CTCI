@@ -10,7 +10,6 @@ def solution(s1,s2):
         # s1 will be replaced by it's rotation. 
         s1 = s1[1:]+s1[0]
         if s1 == s2:
-            # if 
             return True
         
     return False

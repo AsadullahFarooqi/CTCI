@@ -1,4 +1,4 @@
-from LinkedList import LinkedList
+from Library import LinkedList
 
 def solution_recursive(a,b):
     """this solution is on hole i have to think about it and see 

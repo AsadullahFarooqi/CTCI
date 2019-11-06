@@ -1,4 +1,4 @@
-from LinkedList import LinkedList 
+from Library import LinkedList 
 def solution(r):
     temp_r = r.next
     runner = r.next.next

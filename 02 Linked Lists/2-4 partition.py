@@ -1,4 +1,4 @@
-from LinkedList import LinkedList
+from Library import LinkedList
 
 def solution(r, x):
     # in this solution we initialize two new arrays.

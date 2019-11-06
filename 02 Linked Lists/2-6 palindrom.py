@@ -1,4 +1,4 @@
-from LinkedList import LinkedList
+from Library import LinkedList
 def solution_iterative(root):
     ans = ""
     while root:

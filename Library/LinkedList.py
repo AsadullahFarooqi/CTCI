@@ -1,29 +1,8 @@
-class Node:
-    """docstring for ClassName"""
-    def __init__(self, value):
-        """Summary
-
-        Args:
-            value (TYPE): Description
-        """
-        self.val = value
-        self.next = None
+from Nodes import ListNode
         
 class LinkedList:
 
-    """Summary
-
-    Attributes:
-        next (TYPE): Description
-        val (TYPE): Description
-    """
-
     def __init__(self):
-        """Summary
-
-        Args:
-            value (TYPE): Description
-        """
 
     def push(self, root, value):
         """Summary
@@ -38,7 +17,7 @@ class LinkedList:
         temp = root
         while temp.next:
             temp = temp.next
-        temp.next = Node(value)
+        temp.next = ListNode(value)
         return root
 
     def pop(self, root):
@@ -61,35 +40,23 @@ class LinkedList:
     def insert(self, value, root=None, index=None):
         """Summary
 
-        Args:
-            value (TYPE): Description
-            root (None, optional): Description
-            index (None, optional): Description
-
-        Returns:
-            TYPE: Description
         """
         if not root:
-            return Node(value)
+            return ListNode(value)
         elif not index:
             return push(root, value)
         i = 0
         temp = root
-        while i < index - 1:
+        while i <= index - 1:
             i += 1
             temp = temp.next
 
-        b = Node(value)
+        b = ListNode(value)
         b.next = temp.next
         temp.next = b
         return root
 
     def print_list(self, root):
-        """Summary
-
-        Args:
-            root (TYPE): Description
-        """
         temp = root
         while temp:
             if not temp.next:
@@ -102,13 +69,6 @@ class LinkedList:
     def delete(self, root, value=None, index=None):
         """Summary
 
-        Args:
-            root (TYPE): Description
-            value (None, optional): Description
-            index (None, optional): Description
-
-        Returns:
-            TYPE: Description
         """
         temp = root
         while temp.val != value:
@@ -118,16 +78,11 @@ class LinkedList:
     def create_list(self, l):
         """Summary
         This method will create a linkedlist from given partition 
-        Args:
-            l (TYPE): Description
-
-        Returns:
-            TYPE: Description
         """
-        r = Node(l[0])
+        r = ListNode(l[0])
         temp = r
         for i in l[1:]:
-            t = Node(i)
+            t = ListNode(i)
             temp.next = t
             temp = t
         return r

@@ -1,4 +1,4 @@
-from LinkedList import LinkedList
+from Library import LinkedList
 
 def solution1(root, kth):
     # finding the length of the linked list and then returning

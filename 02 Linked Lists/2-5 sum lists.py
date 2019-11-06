@@ -1,6 +1,4 @@
-"""Summary
-"""
-from LinkedList import LinkedList
+from Library import LinkedList
 
 def solution_iterative(A,B):
     """
